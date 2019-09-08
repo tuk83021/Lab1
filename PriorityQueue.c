@@ -8,8 +8,8 @@
 
 #define DISK1_BEGIN 4
 #define DISK1_FINISH 5
-// #define DISK2_BEGIN 6
-// #define DISK2_FINISH 7
+#define DISK2_BEGIN 6
+#define DISK2_FINISH 7
  
 #define END 8
 
