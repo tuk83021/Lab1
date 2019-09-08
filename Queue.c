@@ -68,24 +68,24 @@ void toString(Node *queue)
 }
 
 // int main(void){
-//     Node queue[10];
-//     initializeQ(queue);
-//     enQueue(queue, 1);
-//     enQueue(queue, 2);
-//     enQueue(queue, 3);
-//     enQueue(queue, 4);
-//     enQueue(queue, 5);
-//     enQueue(queue, 6);
-//     enQueue(queue, 7);
-//     enQueue(queue, 8);
-//     enQueue(queue, 9);
+//     Node queue;
+//     initializeQ(&queue);
+//     enQueue(&queue, 1);
+//     enQueue(&queue, 2);
+//     enQueue(&queue, 3);
+//     enQueue(&queue, 4);
+//     enQueue(&queue, 5);
+//     enQueue(&queue, 6);
+//     enQueue(&queue, 7);
+//     enQueue(&queue, 8);
+//     enQueue(&queue, 9);
 //     // enQueue(queue, 10);
-//     enQueue(queue, 11);
-//     enQueue(queue, 12);
-//     enQueue(queue, 13);
+//     enQueue(&queue, 11);
+//     enQueue(&queue, 12);
+//     enQueue(&queue, 13);
 
-//     deQueue(queue);
-//     deQueue(queue);
-//     toString(queue);
+//     deQueue(&queue);
+//     deQueue(&queue);
+//     toString(&queue);
 //     return 1;
 // }
