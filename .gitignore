@@ -1,3 +1,5 @@
 a.out
+.vscode
+*.dSYM
 demo_priority.c 
 CIS 3207 Project 1 Giorgios Discrete Event Simulation.pdf
