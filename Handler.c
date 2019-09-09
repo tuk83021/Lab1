@@ -14,11 +14,11 @@
 #define QUEUESIZE 10
 #define ARRIVE_MIN 2
 #define ARRIVE_MAX 8
-#define FIN_TIME 5000
+#define FIN_TIME 10000
 
 //define MIN MAX
 #define CPU_MIN 50
-#define CPU_MAX 100
+#define CPU_MAX 70
 #define DISK_MIN 80
 #define DISK_MAX 160 // mb/s
 
@@ -37,14 +37,12 @@ Node queue_CPU;
 Node queue_DISK1;
 Node queue_DISK2;
 
-// FILE *fp;
 int main(){
-    // fp = fopen("log.txt", "w+");
     srand(time(NULL));
     Event* task;
     PQueue* EventQueue = initializePQ();
 
-    //initial queueFIFO
+    // initial queueFIFO
     // queue size is 10 coded in queue.c func initializeQ
     // cpu
     initializeQ(&queue_CPU);
@@ -52,6 +50,9 @@ int main(){
     initializeQ(&queue_DISK1);
     // disk 2
     initializeQ(&queue_DISK2);
+
+    // initial file log.txt
+    FILE* fp = fopen("log.txt", "w");
 
     //create new to trigger
     Event job1;
@@ -75,32 +76,34 @@ int main(){
         switch (task->type){
             case 2: // cpu start
                 process_CPU(task, EventQueue);
-                // printf("time: %d\n", timeGlobal);
                 break;
             case 3: // cpu finish
                 process_CPU(task, EventQueue);
-                // printf("time: %d\n", timeGlobal);
                 break;
             case 4: // disk start
                 process_DISK(task, EventQueue);
                 break;
+            // disk finish
             case 5:
-            case 6: // disk finish
+            case 6: 
                 process_DISK(task, EventQueue);
                 break;
             case 7: // end
-                // fprintf(fp, "At time %-4d Job%d exits\n", timeGlobal, task->jobSeq);
-                printf("At time %-4d Job%-2d exits\n", timeGlobal, task->jobSeq);
-                // fclose(fp);
+                // FILE* fp = fopen("log.txt", "a");
+                fprintf(fp, "At time %-5d Job%d exits\n", timeGlobal, task->jobSeq);
+                fclose(fp);
+                printf("At time %-5d Job%-2d exits\n", timeGlobal, task->jobSeq);
                 break;
     } }
-    // fclose(fp);
     return 1;
 }
 
 void process_CPU(Event* task, PQueue* eventQ){
+    // file write
+    FILE *fp = fopen("log.txt", "a");
     if(task->type == 2){ // begin
-        printf("At time %-4d Job%-2d arrives\n", timeGlobal, task->jobSeq);
+        fprintf(fp, "At time %-5d Job%-2d arrives\n", timeGlobal, task->jobSeq);
+        printf("At time %-5d Job%-2d arrives\n", timeGlobal, task->jobSeq);
         // 1. create new job
         Event next_job;
         next_job.jobSeq = task->jobSeq + 1;
@@ -114,7 +117,8 @@ void process_CPU(Event* task, PQueue* eventQ){
         // 3. send task to cpu
         enQueue(&queue_CPU, task->jobSeq);
     }else{ // != 2
-        printf("At time %-4d Job%-2d finishes at CPU\n", timeGlobal, task->jobSeq);
+        fprintf(fp, "At time %-5d Job%-2d finishes at CPU\n", timeGlobal, task->jobSeq);
+        printf("At time %-5d Job%-2d finishes at CPU\n", timeGlobal, task->jobSeq);
         // finished
         //idle=0
         cpu_status = 0; 
@@ -130,9 +134,12 @@ void process_CPU(Event* task, PQueue* eventQ){
             // 2. insert the event
             push(eventQ, &disk_task);
         }else{
-            printf("At time %-4d Job%-2d exits\n", timeGlobal, task->jobSeq);
+            fprintf(fp, "At time %-5d Job%-2d exits\n", timeGlobal, task->jobSeq);
+            printf("At time %-5d Job%-2d exits\n", timeGlobal, task->jobSeq);
         }
     }
+    // file closed
+    fclose(fp);
     //check if cpu is idle
     if( (queue_CPU.current>=1) && (cpu_status) == 0){
         // 1. pop out 1st in queue cpu
@@ -151,11 +158,13 @@ void process_CPU(Event* task, PQueue* eventQ){
 }
 
 void process_DISK(Event* task, PQueue* eventQ){
+    // file write
+    FILE* fp = fopen("log.txt", "a");
 
     // arrive at disk section
     if(task->type == 4){
-        // fprintf(fp, "At time %-4d Job%d arrives at Disk\n", timeGlobal, task->jobSeq);
-        printf("At time %-4d Job%-2d arrives at Disk\n", timeGlobal, task->jobSeq);
+        fprintf(fp, "At time %-5d Job%d arrives at Disk\n", timeGlobal, task->jobSeq);
+        printf("At time %-5d Job%-2d arrives at Disk\n", timeGlobal, task->jobSeq);
         // 1. select disk
         int size1 = queue_DISK1.current;
         int size2 = queue_DISK2.current;
@@ -171,8 +180,8 @@ void process_DISK(Event* task, PQueue* eventQ){
 
         // finish at disk 1
         if(task->type == 5){
-            // fprintf(fp, "At time %-4d Job%d finishes IO at Disk1\n", timeGlobal, task->jobSeq);
-            printf("At time %-4d Job%-2d finishes IO at Disk1\n", timeGlobal, task->jobSeq);
+            fprintf(fp, "At time %-5d Job%d finishes IO at Disk1\n", timeGlobal, task->jobSeq);
+            printf("At time %-5d Job%-2d finishes IO at Disk1\n", timeGlobal, task->jobSeq);
             // 1. create new event for going to disk
             Event task1;
             task1.jobSeq = task->jobSeq + 1;
@@ -188,8 +197,8 @@ void process_DISK(Event* task, PQueue* eventQ){
         }
         // finish at disk 2
         if(task->type == 6){
-            // fprintf(fp, "At time %-4d Job%d finishes IO at Disk2\n", timeGlobal, task->jobSeq);
-            printf("At time %-4d Job%-2d finishes IO at Disk2\n", timeGlobal, task->jobSeq);
+            fprintf(fp, "At time %-5d Job%d finishes IO at Disk2\n", timeGlobal, task->jobSeq);
+            printf("At time %-5d Job%-2d finishes IO at Disk2\n", timeGlobal, task->jobSeq);
             // 1. create new event for going to disk
             Event task2;
             task2.jobSeq = task->jobSeq + 1;
@@ -204,7 +213,7 @@ void process_DISK(Event* task, PQueue* eventQ){
             disk2_status = 0;
         }
     }
-
+    fclose(fp);
 
     if((queue_DISK1.current>=1) && (disk1_status) == 0){
         // 1. pop out 1st in queue disk1
