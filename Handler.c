@@ -62,7 +62,7 @@ int main(){
     push(EventQueue, &job1);
 
     while(isEmpty(EventQueue)&&(timeGlobal < FIN_TIME)){
-        // if(EventQueue->event->jobSeq >= 40){
+        // if(EventQueue->event->type >= 5){
         //     puts("-----event queue-----");
         //     printQ(EventQueue);
         //     puts("-----disk1 queue-----");
@@ -100,7 +100,7 @@ int main(){
 
 void process_CPU(Event* task, PQueue* eventQ){
     if(task->type == 2){ // begin
-        printf("At time %-4d Job%d arrives\n", timeGlobal, task->jobSeq);
+        printf("At time %-4d Job%-2d arrives\n", timeGlobal, task->jobSeq);
         // 1. create new job
         Event next_job;
         next_job.jobSeq = task->jobSeq + 1;
