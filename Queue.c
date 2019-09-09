@@ -8,6 +8,7 @@ typedef struct Node
     int size;
 } Node;
 
+// make the array all zeros while initializing
 void initializeQ(Node *queue)
 {
     if(queue == NULL){
@@ -25,30 +26,31 @@ int enQueue(Node *queue, int jobSeq)
 {
     int size = queue->size;
     int *seq = queue->sequence;
+    // if full, return
     if (queue->current == size)
     {
         return 0;
     }
+    // add new one
     seq[queue->current] = jobSeq;
     queue->current += 1;
     return 1;
 }
 
-int queueAdjust(int *arr, int *size)
+void queueAdjust(int *arr, int *size)
 {
     for (int i = 0; i < *size - 1; i++)
     {
         arr[i] = arr[i + 1];
     }
+    // make the last one zero
     arr[*size - 1] = 0;
+    // current size - 1
     *size -= 1;
-    return 1;
 }
 
-int deQueue(Node *queue)
-{
-    if (queue == NULL)
-    {
+int deQueue(Node *queue){
+    if (queue == NULL){
         return 0;
     }
     int del = queue->sequence[0];
@@ -56,15 +58,14 @@ int deQueue(Node *queue)
     return del;
 }
 
-
-
+// print the queue
 void toString(Node *queue)
 {
-
     for (int i = 0; i < queue->size; i++)
     {
-        printf("Job:%d\n", queue->sequence[i]);
+        printf("Job:%d\t", queue->sequence[i]);
     }
+    puts("");
 }
 
 // int main(void){
