@@ -11,8 +11,8 @@ int randNum(int low, int high){
 // chance to get into disk
 // 1 for true;
 // 0 for false
-int probablyGet(int percent){
-    if(percent < 0 || percent > 100){
+int probabilityGet(){
+    if(QUIT_PROB < 0 || QUIT_PROB > 100){
         perror("Invalid");
         return -1;
     }
