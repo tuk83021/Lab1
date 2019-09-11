@@ -5,7 +5,7 @@ int randNum(int low, int high){
     if((high-low) < 0 || high < 0 || low < 0){
         perror("Invalid input");
     }
-    return rand() % (high - low) + low;
+    return rand() % (high - low + 1) + low;
 }
 
 // chance to get into disk
@@ -16,8 +16,8 @@ int probablyGet(int percent){
         perror("Invalid");
         return -1;
     }
-    int prob = randNum(0, 100);
-    if(prob > QUIT_PROB){
+    int prob = randNum(1, 100);
+    if(prob <= QUIT_PROB){
         return 0;//goto disk
     }
     return 1;//exit
