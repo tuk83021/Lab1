@@ -1,13 +1,14 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#define START 1
 
 #define ARRIVAL 8
 #define CPU_BEGIN 2
 #define CPU_FINISH 3
 
-#define DISK 4
+#define DISK_ARRIVAL 9
+#define DISK1_BEGIN 10
+#define DISK2_BEGIN 11
 #define DISK1_FINISH 5
 #define DISK2_FINISH 6
 
