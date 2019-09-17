@@ -80,7 +80,7 @@ int main(){
 
     while(isEmpty(EventQueue)&&(timeGlobal < FIN_TIME)){
         task = pop(EventQueue);
-        usleep(500000);
+        // usleep(500000);
         switch (task->type){
             case ARRIVAL: // cpu arrival
                 timeGlobal = task->time;
@@ -110,9 +110,9 @@ int main(){
             case 7: // end
             {
                 FILE* fp = fopen("log.txt", "a");
-                fprintf(fp, "At time %-5d Job%-3d exits\n", timeGlobal, task->jobSeq);
+                fprintf(fp, "At time %-7d Job%-3d exits\n", timeGlobal, task->jobSeq);
                 fclose(fp);
-                printf("At time %-5d Job%-3d exits\n", timeGlobal, task->jobSeq);
+                printf("At time %-7d Job%-3d exits\n", timeGlobal, task->jobSeq);
                 break;
             }
     } }
@@ -123,9 +123,9 @@ int main(){
 }
 void process_Arrival(Event* task, PQueue* eventQ){
     FILE* file = fopen("log.txt", "a");
-    fprintf(file, "At time %-5d Job%-3d arrives\n", task->time, task->jobSeq);
+    fprintf(file, "At time %-7d Job%-3d arrives\n", task->time, task->jobSeq);
     fclose(file);
-    printf("At time %-5d Job%-3d arrives\n", task->time, task->jobSeq);
+    printf("At time %-5d Job%-7d arrives\n", task->time, task->jobSeq);
     // enqueue to cpu queue
     enQueue(&queue_CPU, task->jobSeq);
     
@@ -175,15 +175,15 @@ void process_CPU(Event* task, PQueue* eventQ){
             push(eventQ, &all_fin);
         }
         cpu_status = IDLE;
-        printf("At time %-5d job%-3d finishes at CPU\n",timeGlobal, task->jobSeq );
-        fprintf(file, "At time %-5d job%-3d finishes at CPU\n",timeGlobal, task->jobSeq);
+        printf("At time %-7d job%-3d finishes at CPU\n",timeGlobal, task->jobSeq );
+        fprintf(file, "At time %-7d job%-3d finishes at CPU\n",timeGlobal, task->jobSeq);
         
     }
     if( (queue_CPU.current>=1) && (cpu_status) == IDLE){
         // 1. pop out 1st in queue cpu
         int seq = deQueue(&queue_CPU);
-        printf("At time %-5d job%-3d begins at CPU\n",task->time, seq );
-        fprintf(file, "At time %-5d job%-3d begins at CPU\n",task->time, seq);
+        printf("At time %-7d job%-3d begins at CPU\n",task->time, seq );
+        fprintf(file, "At time %-7d job%-3d begins at CPU\n",task->time, seq);
         // 2. create cpu begin
         Event job_begin;
         job_begin.jobSeq = seq;
@@ -198,9 +198,9 @@ void process_CPU(Event* task, PQueue* eventQ){
 }
 void process_Arrival_DISK(Event* task, PQueue* eventQ){
     FILE* file = fopen("log.txt", "a");
-    fprintf(file, "At time %-5d Job%-3d arrives at Disk\n", task->time, task->jobSeq);
+    fprintf(file, "At time %-7d Job%-3d arrives at Disk\n", task->time, task->jobSeq);
     fclose(file);
-    printf("At time %-5d Job%-3d arrives at Disk\n", task->time, task->jobSeq);
+    printf("At time %-7d Job%-3d arrives at Disk\n", task->time, task->jobSeq);
     // enqueue to cpu queue
     int size1 = queue_DISK1.current;
     int size2 = queue_DISK2.current;
@@ -250,11 +250,15 @@ void process_DISK(Event* task, PQueue* eventQ){
         break;
     }
     case DISK1_FINISH:
+        printf("At time %-7d Job%-3d finishes at Disk1\n", task->time, task->jobSeq);
+        fprintf(file, "At time %-7d Job%-3d finishes at Disk1\n", task->time, task->jobSeq);
         enQueue(&queue_CPU, task->jobSeq);
         disk1_status = IDLE;
         break;
 
     case DISK2_FINISH:
+        printf("At time %-7d Job%-3d finishes at Disk2\n", task->time, task->jobSeq);
+        fprintf(file, "At time %-7d Job%-3d finishes at Disk2\n", task->time, task->jobSeq);
         enQueue(&queue_CPU, task->jobSeq);
         disk2_status = IDLE;
         break;
@@ -262,8 +266,8 @@ void process_DISK(Event* task, PQueue* eventQ){
     if((queue_DISK1.current >= 1) && (disk1_status == IDLE)){
         // 1. pop out the 1st one
         int seq = deQueue(&queue_DISK1);
-        printf("At time %-5d job%-3d begins at Disk1\n",task->time, seq );
-        fprintf(file, "At time %-5d job%-3d begins at Disk1\n",task->time, seq);
+        printf("At time %-7d job%-3d begins at Disk1\n",task->time, seq );
+        fprintf(file, "At time %-7d job%-3d begins at Disk1\n",task->time, seq);
         // 2. create disk begins
         Event job_begin;
         job_begin.jobSeq = seq;
@@ -276,8 +280,8 @@ void process_DISK(Event* task, PQueue* eventQ){
     if((queue_DISK2.current >= 1) && (disk2_status == IDLE)){
         // 1. pop out the 1st one
         int seq = deQueue(&queue_DISK2);
-        printf("At time %-5d job%-3d begins at Disk2\n",task->time, seq );
-        fprintf(file, "At time %-5d job%-3d begins at Disk2\n",task->time, seq);
+        printf("At time %-7d job%-3d begins at Disk2\n",task->time, seq );
+        fprintf(file, "At time %-7d job%-3d begins at Disk2\n",task->time, seq);
         // 2. create disk begins
         Event job_begin;
         job_begin.jobSeq = seq;
