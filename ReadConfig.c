@@ -5,6 +5,7 @@
 
 // static int temps[SIZE];
 int* temps;
+unsigned int seed;
 static char name[SIZE][15];
 
 void readFile(){
@@ -16,8 +17,11 @@ void readFile(){
 
     int count= 0;
     if (file != NULL) {
+        if( fscanf(file, "%s %u\n", name[count], &seed) != EOF){
+            printf("0. Read: %s %u\n",name[count], temps[count]);
+        }
         while( fscanf(file, "%s %d\n", name[count], &temps[count]) != EOF){
-            printf("%d. Read: %s %d\n", count,name[count], temps[count]);
+            printf("%d. Read: %s %d\n", count+1,name[count], temps[count]);
             count+=1;
         }
     }else{
@@ -26,8 +30,13 @@ void readFile(){
     }
     fclose(file);
     printf("File read complete.\n\n");
-    // return 1;
 }
+
+// Seed
+unsigned int getSeed(){
+    return seed;
+}
+
 
 // Init Time
 int getIniTime(){
