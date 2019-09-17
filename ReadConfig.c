@@ -3,7 +3,6 @@
 
 #define SIZE  11
 
-// static int temps[SIZE];
 int* temps;
 unsigned int seed;
 static char name[SIZE][15];
@@ -96,9 +95,3 @@ int getDisk2Max(){
 void destroyPtr(){
     free(temps);
 }
-
-// int main(void){
-//     readFile();
-//     printf("%s %d\n", name[0], temps[0]);
-//     return 1;
-// }
