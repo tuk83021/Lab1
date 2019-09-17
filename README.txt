@@ -117,3 +117,75 @@ Functions:
 --void readFile();
 
 Function reads data from "config.txt", assigns each data to two arrays.
+
+--unsigned int getSeed();
+
+Function reads SEED from "config.txt"
+
+return unsigned int SEED
+
+--int getInitTime();
+
+Function reads INIT_TIME from "config.txt"
+
+return int INIT_TIME
+
+--int getFineTime();
+
+Function reads FIN_TIME from "config.txt"
+
+return int FIN_TIME
+
+--int getFineTime();
+
+Function reads FIN_TIME from "config.txt"
+
+return int FIN_TIME
+
+--int getArrivalMin();
+
+Function reads ArrivalMin from "config.txt"
+
+return int ARRIVALMIN
+
+--int getArrivalMax();
+
+Function reads ArrivalMax from "config.txt"
+
+return int ARRIVALMAX
+
+--int getQuitProb();
+
+Function reads QUITPROB from "config.txt"
+
+return int QUIT_PROB
+
+--int getCPUMin();
+
+Function reads CPUMIN from "config.txt"
+
+return int CPU_MIN
+
+--int getCPUMax();
+
+Function reads CPUMAX from "config.txt"
+
+return int CPU_MAX
+
+--int getDisk1Min();
+--int getDisk2Min();
+
+Functions reads DISK1_MIN and DISK2_MIN from "config.txt"
+
+return int DISK1_MIN and DISK2_MIN
+
+--int getDisk1Max();
+--int getDisk2Max();
+
+Functions reads DISK1_MAX and DISK2_MAX from "config.txt"
+
+return int DISK1_MAX and DISK2_MAX
+
+--void destroyPtr();
+
+Function destroys ptrs
