@@ -52,7 +52,8 @@ int main(){
     fileRead();
 
     // Initial event qeueu and the event
-    srand(time(NULL));
+    srand(getSeed());
+    // srand(time(NULL));
     Event* task;
     PQueue* EventQueue = initializePQ();
 
