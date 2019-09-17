@@ -1,0 +1,16 @@
+SEED 30
+INIT_TIME 0
+FIN_TIME 10000
+ARRIVE_MIN 2
+ARRIVE_MAX 8
+QUIT_PROB 20
+CPU_MIN 50
+CPU_MAX 70
+DISK1_MIN 80
+DISK1_MAX 160
+DISK2_MIN 80
+DISK2_MAX 160
+
+I use following data into my program
+I have learned how one thread machine generally workes. I have also learned executing each 
+    functions each time.
