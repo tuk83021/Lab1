@@ -1,0 +1,733 @@
+At time 0     Job1   arrives
+At time 0     job1   begins at CPU
+At time 59    job1   finishes at CPU
+At time 59    Job1   exits
+At time 65    Job2   arrives
+At time 65    job2   begins at CPU
+At time 131   Job3   arrives
+At time 131   job2   finishes at CPU
+At time 131   job3   begins at CPU
+At time 131   Job2   exits
+At time 187   Job4   arrives
+At time 200   job3   finishes at CPU
+At time 200   job4   begins at CPU
+At time 200   Job3   exits
+At time 254   Job5   arrives
+At time 270   job4   finishes at CPU
+At time 270   job5   begins at CPU
+At time 270   Job4   exits
+At time 317   Job6   arrives
+At time 324   job5   finishes at CPU
+At time 324   job6   begins at CPU
+At time 324   Job5   exits
+At time 375   Job7   arrives
+At time 390   job6   finishes at CPU
+At time 390   job7   begins at CPU
+At time 390   Job6   exits
+At time 432   Job8   arrives
+At time 458   job7   finishes at CPU
+At time 458   job8   begins at CPU
+At time 458   Job7   exits
+At time 491   Job9   arrives
+At time 508   job8   finishes at CPU
+At time 508   job9   begins at CPU
+At time 508   Job8   exits
+At time 546   Job10  arrives
+At time 571   job9   finishes at CPU
+At time 571   job10  begins at CPU
+At time 571   Job9   exits
+At time 610   Job11  arrives
+At time 627   job10  finishes at CPU
+At time 627   job11  begins at CPU
+At time 627   Job10  exits
+At time 667   Job12  arrives
+At time 682   job11  finishes at CPU
+At time 682   job12  begins at CPU
+At time 682   Job11  exits
+At time 720   Job13  arrives
+At time 747   job12  finishes at CPU
+At time 747   job13  begins at CPU
+At time 747   Job12  exits
+At time 772   Job14  arrives
+At time 801   job13  finishes at CPU
+At time 801   job14  begins at CPU
+At time 801   Job13  exits
+At time 840   Job15  arrives
+At time 866   job14  finishes at CPU
+At time 866   job15  begins at CPU
+At time 866   Job14  exits
+At time 900   Job16  arrives
+At time 919   job15  finishes at CPU
+At time 919   job16  begins at CPU
+At time 919   Job15  exits
+At time 965   Job17  arrives
+At time 974   job16  finishes at CPU
+At time 974   job17  begins at CPU
+At time 974   Job16  arrives at Disk
+At time 974   job16  begins at Disk1
+At time 1026  Job18  arrives
+At time 1040  job17  finishes at CPU
+At time 1040  job18  begins at CPU
+At time 1040  Job17  exits
+At time 1076  Job19  arrives
+At time 1110  job18  finishes at CPU
+At time 1110  job19  begins at CPU
+At time 1110  Job18  exits
+At time 1115  Job16  finishes at Disk1
+At time 1140  Job20  arrives
+At time 1176  job19  finishes at CPU
+At time 1176  job16  begins at CPU
+At time 1176  Job19  exits
+At time 1208  Job21  arrives
+At time 1246  job16  finishes at CPU
+At time 1246  job20  begins at CPU
+At time 1246  Job16  exits
+At time 1259  Job22  arrives
+At time 1311  job20  finishes at CPU
+At time 1311  job21  begins at CPU
+At time 1311  Job20  exits
+At time 1315  Job23  arrives
+At time 1361  job21  finishes at CPU
+At time 1361  job22  begins at CPU
+At time 1361  Job21  exits
+At time 1371  Job24  arrives
+At time 1430  job22  finishes at CPU
+At time 1430  job23  begins at CPU
+At time 1430  Job22  exits
+At time 1440  Job25  arrives
+At time 1492  Job26  arrives
+At time 1493  job23  finishes at CPU
+At time 1493  job24  begins at CPU
+At time 1493  Job23  arrives at Disk
+At time 1493  job23  begins at Disk1
+At time 1546  job24  finishes at CPU
+At time 1546  job25  begins at CPU
+At time 1546  Job24  exits
+At time 1560  Job27  arrives
+At time 1606  job25  finishes at CPU
+At time 1606  job26  begins at CPU
+At time 1606  Job25  exits
+At time 1616  Job28  arrives
+At time 1647  Job23  finishes at Disk1
+At time 1673  job26  finishes at CPU
+At time 1673  job27  begins at CPU
+At time 1673  Job26  exits
+At time 1684  Job29  arrives
+At time 1728  job27  finishes at CPU
+At time 1728  job28  begins at CPU
+At time 1728  Job27  arrives at Disk
+At time 1728  job27  begins at Disk1
+At time 1736  Job30  arrives
+At time 1786  job28  finishes at CPU
+At time 1786  job23  begins at CPU
+At time 1786  Job31  arrives
+At time 1786  Job28  exits
+At time 1845  Job32  arrives
+At time 1846  job23  finishes at CPU
+At time 1846  job29  begins at CPU
+At time 1846  Job23  exits
+At time 1884  Job27  finishes at Disk1
+At time 1900  Job33  arrives
+At time 1910  job29  finishes at CPU
+At time 1910  job30  begins at CPU
+At time 1910  Job29  exits
+At time 1952  Job34  arrives
+At time 1978  job30  finishes at CPU
+At time 1978  job31  begins at CPU
+At time 1978  Job30  exits
+At time 2017  Job35  arrives
+At time 2029  job31  finishes at CPU
+At time 2029  job32  begins at CPU
+At time 2029  Job31  exits
+At time 2080  Job36  arrives
+At time 2092  job32  finishes at CPU
+At time 2092  job27  begins at CPU
+At time 2092  Job32  exits
+At time 2145  Job37  arrives
+At time 2152  job27  finishes at CPU
+At time 2152  job33  begins at CPU
+At time 2152  Job27  arrives at Disk
+At time 2152  job27  begins at Disk1
+At time 2202  Job38  arrives
+At time 2214  job33  finishes at CPU
+At time 2214  job34  begins at CPU
+At time 2214  Job33  arrives at Disk
+At time 2214  job33  begins at Disk2
+At time 2264  job34  finishes at CPU
+At time 2264  job35  begins at CPU
+At time 2264  Job34  arrives at Disk
+At time 2267  Job39  arrives
+At time 2305  Job27  finishes at Disk1
+At time 2316  job35  finishes at CPU
+At time 2316  job36  begins at CPU
+At time 2316  Job35  exits
+At time 2323  Job33  finishes at Disk2
+At time 2333  Job40  arrives
+At time 2366  job36  finishes at CPU
+At time 2366  job37  begins at CPU
+At time 2366  Job36  exits
+At time 2395  Job41  arrives
+At time 2417  job37  finishes at CPU
+At time 2417  job38  begins at CPU
+At time 2417  Job37  arrives at Disk
+At time 2417  job37  begins at Disk1
+At time 2446  Job42  arrives
+At time 2486  job38  finishes at CPU
+At time 2486  job39  begins at CPU
+At time 2486  Job38  exits
+At time 2503  Job43  arrives
+At time 2545  job39  finishes at CPU
+At time 2545  job27  begins at CPU
+At time 2545  Job39  exits
+At time 2568  Job44  arrives
+At time 2569  Job37  finishes at Disk1
+At time 2602  job27  finishes at CPU
+At time 2602  job33  begins at CPU
+At time 2602  Job27  arrives at Disk
+At time 2602  job27  begins at Disk1
+At time 2634  Job45  arrives
+At time 2657  job33  finishes at CPU
+At time 2657  job40  begins at CPU
+At time 2657  Job33  exits
+At time 2698  Job46  arrives
+At time 2717  job40  finishes at CPU
+At time 2717  job41  begins at CPU
+At time 2717  Job40  arrives at Disk
+At time 2717  job40  begins at Disk2
+At time 2742  Job27  finishes at Disk1
+At time 2753  Job47  arrives
+At time 2787  job41  finishes at CPU
+At time 2787  job42  begins at CPU
+At time 2787  Job41  exits
+At time 2799  Job40  finishes at Disk2
+At time 2803  Job48  arrives
+At time 2849  job42  finishes at CPU
+At time 2849  job43  begins at CPU
+At time 2849  Job42  exits
+At time 2857  Job49  arrives
+At time 2900  job43  finishes at CPU
+At time 2900  job44  begins at CPU
+At time 2900  Job43  exits
+At time 2921  Job50  arrives
+At time 2965  job44  finishes at CPU
+At time 2965  job37  begins at CPU
+At time 2965  Job44  exits
+At time 2975  Job51  arrives
+At time 3024  job37  finishes at CPU
+At time 3024  job45  begins at CPU
+At time 3024  Job37  exits
+At time 3041  Job52  arrives
+At time 3081  job45  finishes at CPU
+At time 3081  job46  begins at CPU
+At time 3081  Job45  exits
+At time 3091  Job53  arrives
+At time 3137  job46  finishes at CPU
+At time 3137  job27  begins at CPU
+At time 3137  Job46  exits
+At time 3154  Job54  arrives
+At time 3207  job27  finishes at CPU
+At time 3207  job47  begins at CPU
+At time 3207  Job27  exits
+At time 3217  Job55  arrives
+At time 3257  job47  finishes at CPU
+At time 3257  job40  begins at CPU
+At time 3257  Job47  exits
+At time 3278  Job56  arrives
+At time 3322  job40  finishes at CPU
+At time 3322  job48  begins at CPU
+At time 3322  Job40  exits
+At time 3328  Job57  arrives
+At time 3377  job48  finishes at CPU
+At time 3377  job49  begins at CPU
+At time 3377  Job48  exits
+At time 3386  Job58  arrives
+At time 3444  job49  finishes at CPU
+At time 3444  job50  begins at CPU
+At time 3444  Job49  exits
+At time 3445  Job59  arrives
+At time 3506  job50  finishes at CPU
+At time 3506  job51  begins at CPU
+At time 3506  Job50  arrives at Disk
+At time 3506  job50  begins at Disk1
+At time 3508  Job60  arrives
+At time 3561  Job61  arrives
+At time 3566  job51  finishes at CPU
+At time 3566  job52  begins at CPU
+At time 3566  Job51  exits
+At time 3591  Job50  finishes at Disk1
+At time 3618  Job62  arrives
+At time 3636  job52  finishes at CPU
+At time 3636  job53  begins at CPU
+At time 3636  Job52  exits
+At time 3683  Job63  arrives
+At time 3687  job53  finishes at CPU
+At time 3687  job54  begins at CPU
+At time 3687  Job53  exits
+At time 3734  Job64  arrives
+At time 3748  job54  finishes at CPU
+At time 3748  job55  begins at CPU
+At time 3748  Job54  arrives at Disk
+At time 3748  job54  begins at Disk1
+At time 3791  Job65  arrives
+At time 3799  job55  finishes at CPU
+At time 3799  job56  begins at CPU
+At time 3799  Job55  exits
+At time 3841  Job54  finishes at Disk1
+At time 3843  Job66  arrives
+At time 3854  job56  finishes at CPU
+At time 3854  job57  begins at CPU
+At time 3854  Job56  exits
+At time 3909  Job67  arrives
+At time 3924  job57  finishes at CPU
+At time 3924  job58  begins at CPU
+At time 3924  Job57  exits
+At time 3970  Job68  arrives
+At time 3986  job58  finishes at CPU
+At time 3986  job59  begins at CPU
+At time 3986  Job58  exits
+At time 4021  Job69  arrives
+At time 4042  job59  finishes at CPU
+At time 4042  job60  begins at CPU
+At time 4042  Job59  exits
+At time 4089  Job70  arrives
+At time 4098  job60  finishes at CPU
+At time 4098  job61  begins at CPU
+At time 4098  Job60  exits
+At time 4153  Job71  arrives
+At time 4161  job61  finishes at CPU
+At time 4161  job50  begins at CPU
+At time 4161  Job61  exits
+At time 4218  job50  finishes at CPU
+At time 4218  job63  begins at CPU
+At time 4218  Job50  arrives at Disk
+At time 4218  job50  begins at Disk1
+At time 4219  Job72  arrives
+At time 4284  job63  finishes at CPU
+At time 4284  job64  begins at CPU
+At time 4284  Job63  exits
+At time 4287  Job73  arrives
+At time 4343  job64  finishes at CPU
+At time 4343  job65  begins at CPU
+At time 4343  Job64  exits
+At time 4344  Job74  arrives
+At time 4357  Job50  finishes at Disk1
+At time 4400  job65  finishes at CPU
+At time 4400  job54  begins at CPU
+At time 4400  Job65  exits
+At time 4403  Job75  arrives
+At time 4460  Job76  arrives
+At time 4466  job54  finishes at CPU
+At time 4466  job67  begins at CPU
+At time 4466  Job54  exits
+At time 4529  job67  finishes at CPU
+At time 4529  job68  begins at CPU
+At time 4529  Job67  exits
+At time 4530  Job77  arrives
+At time 4580  job68  finishes at CPU
+At time 4580  job69  begins at CPU
+At time 4580  Job68  exits
+At time 4600  Job78  arrives
+At time 4648  job69  finishes at CPU
+At time 4648  job70  begins at CPU
+At time 4648  Job69  exits
+At time 4664  Job79  arrives
+At time 4708  job70  finishes at CPU
+At time 4708  job71  begins at CPU
+At time 4708  Job70  exits
+At time 4734  Job80  arrives
+At time 4760  job71  finishes at CPU
+At time 4760  job72  begins at CPU
+At time 4760  Job71  exits
+At time 4804  Job81  arrives
+At time 4822  job72  finishes at CPU
+At time 4822  job73  begins at CPU
+At time 4822  Job72  exits
+At time 4873  Job82  arrives
+At time 4881  job73  finishes at CPU
+At time 4881  job74  begins at CPU
+At time 4881  Job73  arrives at Disk
+At time 4881  job73  begins at Disk1
+At time 4940  Job83  arrives
+At time 4941  job74  finishes at CPU
+At time 4941  job50  begins at CPU
+At time 4941  Job74  exits
+At time 4991  Job84  arrives
+At time 4995  Job73  finishes at Disk1
+At time 5000  job50  finishes at CPU
+At time 5000  job75  begins at CPU
+At time 5000  Job50  exits
+At time 5059  Job85  arrives
+At time 5070  job75  finishes at CPU
+At time 5070  job77  begins at CPU
+At time 5070  Job75  exits
+At time 5128  Job86  arrives
+At time 5132  job77  finishes at CPU
+At time 5132  job78  begins at CPU
+At time 5132  Job77  exits
+At time 5182  Job87  arrives
+At time 5182  job78  finishes at CPU
+At time 5182  job79  begins at CPU
+At time 5182  Job78  exits
+At time 5232  Job88  arrives
+At time 5232  job79  finishes at CPU
+At time 5232  job80  begins at CPU
+At time 5232  Job79  arrives at Disk
+At time 5232  job79  begins at Disk1
+At time 5297  job80  finishes at CPU
+At time 5297  job81  begins at CPU
+At time 5297  Job80  arrives at Disk
+At time 5297  job80  begins at Disk2
+At time 5300  Job89  arrives
+At time 5356  job81  finishes at CPU
+At time 5356  job82  begins at CPU
+At time 5356  Job81  exits
+At time 5359  Job90  arrives
+At time 5383  Job79  finishes at Disk1
+At time 5413  Job91  arrives
+At time 5414  job82  finishes at CPU
+At time 5414  job83  begins at CPU
+At time 5414  Job82  exits
+At time 5430  Job80  finishes at Disk2
+At time 5463  Job92  arrives
+At time 5473  job83  finishes at CPU
+At time 5473  job84  begins at CPU
+At time 5473  Job83  exits
+At time 5527  Job93  arrives
+At time 5531  job84  finishes at CPU
+At time 5531  job73  begins at CPU
+At time 5531  Job84  exits
+At time 5584  Job94  arrives
+At time 5589  job73  finishes at CPU
+At time 5589  job85  begins at CPU
+At time 5589  Job73  arrives at Disk
+At time 5589  job73  begins at Disk1
+At time 5634  Job95  arrives
+At time 5658  job85  finishes at CPU
+At time 5658  job86  begins at CPU
+At time 5658  Job85  exits
+At time 5676  Job73  finishes at Disk1
+At time 5688  Job96  arrives
+At time 5714  job86  finishes at CPU
+At time 5714  job87  begins at CPU
+At time 5714  Job86  exits
+At time 5758  Job97  arrives
+At time 5784  job87  finishes at CPU
+At time 5784  job88  begins at CPU
+At time 5784  Job87  exits
+At time 5816  Job98  arrives
+At time 5841  job88  finishes at CPU
+At time 5841  job89  begins at CPU
+At time 5841  Job88  arrives at Disk
+At time 5841  job88  begins at Disk1
+At time 5881  Job99  arrives
+At time 5904  job89  finishes at CPU
+At time 5904  job90  begins at CPU
+At time 5904  Job89  exits
+At time 5947  Job100 arrives
+At time 5966  job90  finishes at CPU
+At time 5966  job79  begins at CPU
+At time 5966  Job90  arrives at Disk
+At time 5966  job90  begins at Disk2
+At time 5996  Job88  finishes at Disk1
+At time 6012  Job101 arrives
+At time 6027  job79  finishes at CPU
+At time 6027  job80  begins at CPU
+At time 6027  Job79  exits
+At time 6048  Job90  finishes at Disk2
+At time 6066  Job102 arrives
+At time 6085  job80  finishes at CPU
+At time 6085  job93  begins at CPU
+At time 6085  Job80  exits
+At time 6132  Job103 arrives
+At time 6148  job93  finishes at CPU
+At time 6148  job94  begins at CPU
+At time 6148  Job93  exits
+At time 6190  Job104 arrives
+At time 6200  job94  finishes at CPU
+At time 6200  job95  begins at CPU
+At time 6200  Job94  arrives at Disk
+At time 6200  job94  begins at Disk1
+At time 6256  Job105 arrives
+At time 6260  job95  finishes at CPU
+At time 6260  job73  begins at CPU
+At time 6260  Job95  exits
+At time 6285  Job94  finishes at Disk1
+At time 6314  Job106 arrives
+At time 6327  job73  finishes at CPU
+At time 6327  job97  begins at CPU
+At time 6327  Job73  exits
+At time 6384  Job107 arrives
+At time 6395  job97  finishes at CPU
+At time 6395  job98  begins at CPU
+At time 6395  Job97  exits
+At time 6435  Job108 arrives
+At time 6457  job98  finishes at CPU
+At time 6457  job99  begins at CPU
+At time 6457  Job98  exits
+At time 6495  Job109 arrives
+At time 6516  job99  finishes at CPU
+At time 6516  job100 begins at CPU
+At time 6516  Job99  exits
+At time 6560  Job110 arrives
+At time 6576  job100 finishes at CPU
+At time 6576  job88  begins at CPU
+At time 6576  Job100 arrives at Disk
+At time 6576  job100 begins at Disk1
+At time 6612  Job111 arrives
+At time 6635  job88  finishes at CPU
+At time 6635  job90  begins at CPU
+At time 6635  Job88  arrives at Disk
+At time 6635  job88  begins at Disk2
+At time 6663  Job112 arrives
+At time 6687  job90  finishes at CPU
+At time 6687  job103 begins at CPU
+At time 6687  Job90  arrives at Disk
+At time 6696  Job100 finishes at Disk1
+At time 6718  Job113 arrives
+At time 6733  Job88  finishes at Disk2
+At time 6757  job103 finishes at CPU
+At time 6757  job104 begins at CPU
+At time 6757  Job103 exits
+At time 6785  Job114 arrives
+At time 6817  job104 finishes at CPU
+At time 6817  job105 begins at CPU
+At time 6817  Job104 exits
+At time 6836  Job115 arrives
+At time 6879  job105 finishes at CPU
+At time 6879  job94  begins at CPU
+At time 6879  Job105 exits
+At time 6900  Job116 arrives
+At time 6939  job94  finishes at CPU
+At time 6939  job107 begins at CPU
+At time 6939  Job94  arrives at Disk
+At time 6939  job94  begins at Disk1
+At time 6960  Job117 arrives
+At time 7001  job107 finishes at CPU
+At time 7001  job108 begins at CPU
+At time 7001  Job107 exits
+At time 7028  Job118 arrives
+At time 7069  job108 finishes at CPU
+At time 7069  job109 begins at CPU
+At time 7069  Job108 arrives at Disk
+At time 7069  job108 begins at Disk2
+At time 7081  Job119 arrives
+At time 7088  Job94  finishes at Disk1
+At time 7125  job109 finishes at CPU
+At time 7125  job110 begins at CPU
+At time 7125  Job109 exits
+At time 7149  Job120 arrives
+At time 7178  job110 finishes at CPU
+At time 7178  job111 begins at CPU
+At time 7178  Job110 arrives at Disk
+At time 7178  job110 begins at Disk1
+At time 7190  Job108 finishes at Disk2
+At time 7205  Job121 arrives
+At time 7241  job111 finishes at CPU
+At time 7241  job112 begins at CPU
+At time 7241  Job111 arrives at Disk
+At time 7241  job111 begins at Disk2
+At time 7267  Job110 finishes at Disk1
+At time 7270  Job122 arrives
+At time 7307  job112 finishes at CPU
+At time 7307  job100 begins at CPU
+At time 7307  Job112 arrives at Disk
+At time 7307  job112 begins at Disk1
+At time 7330  Job123 arrives
+At time 7361  job100 finishes at CPU
+At time 7361  job114 begins at CPU
+At time 7361  Job100 exits
+At time 7366  Job111 finishes at Disk2
+At time 7392  Job124 arrives
+At time 7412  job114 finishes at CPU
+At time 7412  job115 begins at CPU
+At time 7412  Job114 exits
+At time 7445  Job112 finishes at Disk1
+At time 7449  Job125 arrives
+At time 7472  job115 finishes at CPU
+At time 7472  job116 begins at CPU
+At time 7472  Job115 exits
+At time 7500  Job126 arrives
+At time 7537  job116 finishes at CPU
+At time 7537  job117 begins at CPU
+At time 7537  Job116 exits
+At time 7561  Job127 arrives
+At time 7590  job117 finishes at CPU
+At time 7590  job118 begins at CPU
+At time 7590  Job117 exits
+At time 7615  Job128 arrives
+At time 7653  job118 finishes at CPU
+At time 7653  job119 begins at CPU
+At time 7653  Job118 exits
+At time 7685  Job129 arrives
+At time 7708  job119 finishes at CPU
+At time 7708  job120 begins at CPU
+At time 7708  Job119 exits
+At time 7748  Job130 arrives
+At time 7758  job120 finishes at CPU
+At time 7758  job108 begins at CPU
+At time 7758  Job120 exits
+At time 7808  Job131 arrives
+At time 7815  job108 finishes at CPU
+At time 7815  job110 begins at CPU
+At time 7815  Job108 arrives at Disk
+At time 7815  job108 begins at Disk1
+At time 7863  Job132 arrives
+At time 7878  job110 finishes at CPU
+At time 7878  job123 begins at CPU
+At time 7878  Job110 exits
+At time 7928  Job108 finishes at Disk1
+At time 7929  Job133 arrives
+At time 7931  job123 finishes at CPU
+At time 7931  job111 begins at CPU
+At time 7931  Job123 arrives at Disk
+At time 7931  job123 begins at Disk1
+At time 7985  Job134 arrives
+At time 7994  job111 finishes at CPU
+At time 7994  job112 begins at CPU
+At time 7994  Job111 exits
+At time 8042  Job123 finishes at Disk1
+At time 8050  Job135 arrives
+At time 8052  job112 finishes at CPU
+At time 8052  job126 begins at CPU
+At time 8052  Job112 arrives at Disk
+At time 8052  job112 begins at Disk1
+At time 8107  job126 finishes at CPU
+At time 8107  job127 begins at CPU
+At time 8107  Job126 exits
+At time 8108  Job136 arrives
+At time 8162  job127 finishes at CPU
+At time 8162  job128 begins at CPU
+At time 8162  Job127 exits
+At time 8164  Job137 arrives
+At time 8186  Job112 finishes at Disk1
+At time 8229  job128 finishes at CPU
+At time 8229  job129 begins at CPU
+At time 8229  Job128 exits
+At time 8232  Job138 arrives
+At time 8291  job129 finishes at CPU
+At time 8291  job130 begins at CPU
+At time 8291  Job129 exits
+At time 8293  Job139 arrives
+At time 8348  Job140 arrives
+At time 8361  job130 finishes at CPU
+At time 8361  job131 begins at CPU
+At time 8361  Job130 exits
+At time 8406  Job141 arrives
+At time 8431  job131 finishes at CPU
+At time 8431  job132 begins at CPU
+At time 8431  Job131 exits
+At time 8459  Job142 arrives
+At time 8491  job132 finishes at CPU
+At time 8491  job108 begins at CPU
+At time 8491  Job132 arrives at Disk
+At time 8491  job132 begins at Disk1
+At time 8513  Job143 arrives
+At time 8554  job108 finishes at CPU
+At time 8554  job134 begins at CPU
+At time 8554  Job108 exits
+At time 8566  Job144 arrives
+At time 8615  Job132 finishes at Disk1
+At time 8619  job134 finishes at CPU
+At time 8619  job123 begins at CPU
+At time 8619  Job134 exits
+At time 8623  Job145 arrives
+At time 8688  job123 finishes at CPU
+At time 8688  job136 begins at CPU
+At time 8688  Job123 exits
+At time 8689  Job146 arrives
+At time 8739  Job147 arrives
+At time 8742  job136 finishes at CPU
+At time 8742  job137 begins at CPU
+At time 8742  Job136 exits
+At time 8804  job137 finishes at CPU
+At time 8804  job112 begins at CPU
+At time 8804  Job137 arrives at Disk
+At time 8804  job137 begins at Disk1
+At time 8806  Job148 arrives
+At time 8858  job112 finishes at CPU
+At time 8858  job138 begins at CPU
+At time 8858  Job112 exits
+At time 8865  Job149 arrives
+At time 8903  Job137 finishes at Disk1
+At time 8922  job138 finishes at CPU
+At time 8922  job139 begins at CPU
+At time 8922  Job150 arrives
+At time 8922  Job138 exits
+At time 8977  Job151 arrives
+At time 8989  job139 finishes at CPU
+At time 8989  job141 begins at CPU
+At time 8989  Job139 exits
+At time 9034  Job152 arrives
+At time 9044  job141 finishes at CPU
+At time 9044  job142 begins at CPU
+At time 9044  Job141 arrives at Disk
+At time 9044  job141 begins at Disk1
+At time 9100  Job153 arrives
+At time 9113  job142 finishes at CPU
+At time 9113  job143 begins at CPU
+At time 9113  Job142 exits
+At time 9150  Job141 finishes at Disk1
+At time 9154  Job154 arrives
+At time 9166  job143 finishes at CPU
+At time 9166  job144 begins at CPU
+At time 9166  Job143 arrives at Disk
+At time 9166  job143 begins at Disk1
+At time 9216  Job155 arrives
+At time 9225  job144 finishes at CPU
+At time 9225  job145 begins at CPU
+At time 9225  Job144 exits
+At time 9286  Job156 arrives
+At time 9295  job145 finishes at CPU
+At time 9295  job146 begins at CPU
+At time 9295  Job145 exits
+At time 9319  Job143 finishes at Disk1
+At time 9340  Job157 arrives
+At time 9359  job146 finishes at CPU
+At time 9359  job148 begins at CPU
+At time 9359  Job146 exits
+At time 9391  Job158 arrives
+At time 9424  job148 finishes at CPU
+At time 9424  job149 begins at CPU
+At time 9424  Job148 exits
+At time 9451  Job159 arrives
+At time 9476  job149 finishes at CPU
+At time 9476  job137 begins at CPU
+At time 9476  Job149 exits
+At time 9510  Job160 arrives
+At time 9530  job137 finishes at CPU
+At time 9530  job150 begins at CPU
+At time 9530  Job137 arrives at Disk
+At time 9530  job137 begins at Disk1
+At time 9570  Job161 arrives
+At time 9586  job150 finishes at CPU
+At time 9586  job152 begins at CPU
+At time 9586  Job150 exits
+At time 9629  Job162 arrives
+At time 9637  Job137 finishes at Disk1
+At time 9649  job152 finishes at CPU
+At time 9649  job153 begins at CPU
+At time 9649  Job152 exits
+At time 9690  Job163 arrives
+At time 9703  job153 finishes at CPU
+At time 9703  job141 begins at CPU
+At time 9703  Job153 exits
+At time 9740  Job164 arrives
+At time 9762  job141 finishes at CPU
+At time 9762  job155 begins at CPU
+At time 9762  Job141 exits
+At time 9802  Job165 arrives
+At time 9820  job155 finishes at CPU
+At time 9820  job156 begins at CPU
+At time 9820  Job155 exits
+At time 9868  Job166 arrives
+At time 9872  job156 finishes at CPU
+At time 9872  job143 begins at CPU
+At time 9872  Job156 exits
+At time 9931  job143 finishes at CPU
+At time 9931  job158 begins at CPU
+At time 9931  Job143 exits
+At time 9936  Job167 arrives
+At time 9996  job158 finishes at CPU
+At time 9996  job159 begins at CPU
+At time 9996  Job158 exits
+At time 10000 Job0   arrives
